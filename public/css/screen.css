@@ -1,0 +1,637 @@
+@media screen and (max-width: 700px) {
+    .formulaire h1{
+        font-size: 30px;
+    }
+    #formulaire_code_postal{
+        width: 400px;
+    }
+    .ul_code_postal {
+        width: 435px;
+    }
+    #formulaire {
+        width: 550px;
+    }
+    .popup-h4{
+        padding: 0 50px;
+        font-size: 22px;
+    }
+    .btn-postal {
+        width: 400px;
+    }
+    .form_tour{
+        width: 500px;
+    }
+    .form_calendrier>h2{
+        width: 100%;
+    }
+    #formulaire h2{
+        font-size: 20px;
+    }
+    .mois{
+        left: 135px;
+        font-size: 19px;
+        top: 113px;
+    }
+    .bouttonG{
+        left: 180px;
+    }
+    #calendrier{
+        width: 330px;
+    }
+    .form_heure>label,
+    .form_nb_personne>label, 
+    .form_deroulement>label, 
+    .form_nom_lieu>label {
+        width: 500px;
+    }
+    #formulaire_heure_de_debut {
+        margin: 0 auto 35%;
+    }
+    #formulaire_deroulement {
+        margin: 0 0 39%;
+    }
+    #formulaire_champ_libre {
+        margin-bottom: 9%;
+    }
+    #formulaire_nb_personne {
+        margin-bottom: 33%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 38%;
+    }
+    .btn-retour,
+    #formulaire_go, 
+    .btn{
+        width: 180px;
+    }
+    .progress{
+        width: 400px;
+    }
+    .form_nom>.required{
+        font-size: 18px;
+    }
+    .select{
+        width: 300px;
+        margin: 0 0 37%;
+    }
+    .form_email>label,
+    .form_nom_lieu>label,
+    .form_nom>label,
+    .form_budget>label, .required{
+        font-size: 19px;
+    }
+    
+    #formulaire_numero{
+        font-size: 16px;
+        margin-bottom: 28%;
+    }
+    .popup {
+        width: 550px;
+    }
+    .popup-h4 {
+        padding: 0 30px;
+    }
+    .btn-popup{
+        margin-top: 30%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #formulaire {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .popup {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .popup-h4 {
+        font-size: 26px;
+    }
+    .form_ambiance>label {
+        width: 100%;
+    }
+    #calendrier {
+        margin: 70px auto 24%;
+    }
+    .progress {
+        margin: 40px auto;
+    }
+    .select {
+        margin: 0 0 54%;
+    }
+    #formulaire_heure_de_debut {
+        margin: 0 auto 51%;
+    }
+    #formulaire_nb_personne {
+        margin-bottom: 49%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 48%;
+    }
+    #popup-base {
+        background-color: rgb(240, 240, 240);
+    }
+    #formulaire_champ_libre {
+        margin-bottom: 26%;
+    }
+    #formulaire_email {
+        margin-bottom: 28%;
+    }
+    #formulaire_deroulement {
+        margin: 0 0 56%;
+    }
+    .form_tour {
+        height: 65%;
+    }
+    .btn-retour, #formulaire_go, .btn {
+        top: inherit;
+    }
+    .form_ambiance {
+        margin: 150px auto 20px auto;
+    }
+    .form_budget {
+        margin: auto;
+    }
+    .mois {
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        top: 170px;
+    }
+    .bouttonD {
+        top: 157px;
+    }
+    .bouttonG {
+        top: 157px;
+    }
+    #formulaire_numero {
+        margin-bottom: 44%;
+    }
+}
+@media screen and (max-width: 520px){
+    .form_tour {
+        width: 450px;
+    }
+    #calendrier {
+        width: 300px;
+        margin: 70px auto 26%;
+    }
+    #formulaire_numero {
+        margin-bottom: 47%;
+    }
+    .form_heure>label,
+    .form_nb_personne>label, 
+    .form_deroulement>label, 
+    .form_nom_lieu>label {
+        width: 450px;
+    }
+    #body {
+        background-image: url(../img/dj500.jpg);
+    }
+    .select {
+        margin: 0 0 59%;
+    }
+    #formulaire_heure_de_debut {
+        margin: 0 auto 57%;
+    }
+    #formulaire_deroulement {
+        margin: 0 0 62%;
+    }
+    #formulaire_nb_personne {
+        margin-bottom: 54%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 53%;
+    }
+    #formulaire_champ_libre {
+        margin-bottom: 24%;
+    }
+    #formulaire_email {
+        margin-bottom: 31%;
+    }
+    .popup {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .popup-h4 {
+        padding: 80px 30px 0;
+        font-size: 27px;
+    }
+    .btn-popup {
+        margin-top: 30%;
+    }
+    .btn-retour, #formulaire_go, .btn {
+        width: 160px;
+    }
+    .bouttonD {
+        right: 150px;
+    }
+    .bouttonG {
+        left: 150px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .mois {
+        font-size: 17px;
+    }
+    .form_tour{
+        width: 90%;
+    }
+    .imgOptions img {
+        width: 150px;
+        height: 100px;
+    }
+    #form_entreprise_options>label {
+        height: 100px;
+        padding: 24px;
+        font-size: 14px;
+        margin-left: 0;
+    }
+    #form_entreprise_options {
+        margin-bottom: 20px;
+        margin-right: 24px;
+    }
+}
+@media screen and (max-width: 481px) {
+    #formulaire {
+        width: 100%;
+    height: 111%;
+    border-radius: 0;
+    top: 17%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .popup-h4 {
+        padding: 80px 30px 20px;
+        font-size: 22px;
+    }
+    .form_email>label,
+    .form_nom_lieu>label,
+    .form_nom>label[for=formulaire_prenom]{
+        margin-top: 0;
+    }
+    #formulaire_nom {
+        margin-bottom: 500px;
+    }
+    .popup {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        /* margin-top: -280px; */
+    }
+    #formulaire h2 {
+        font-size: 19px;
+        margin: 30px auto 0;
+    }
+    #formulaire_email{
+        margin-bottom: 0;
+    }
+    #formulaire_numero {
+        margin-bottom: 57%;
+    }
+    .progress {
+        margin: 20px auto;
+        width: 80%;
+    }
+    .mois {
+        top: 162px;
+    }
+    .bouttonD {
+        right: 26%;
+        top: 148px;
+    }
+    .bouttonG {
+        left: 26%;
+        top: 148px;
+    }
+    #calendrier {
+        margin: 117px auto 29%;
+        width: 80%;
+    }
+    .select {
+        margin: 0 0 72%;
+    }
+    #formulaire_heure_de_debut {
+        margin: 0 auto 69%;
+    }
+    #formulaire_deroulement {
+        margin: 0 0 75%;
+    }
+    #formulaire_nb_personne {
+        margin-bottom: 67%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 66%;
+    }
+    #formulaire_champ_libre {
+        margin-bottom: 34%;
+    }
+    .form_email>label,
+    .form_nom>label,
+    .form_nom_lieu>label,
+    .form_budget>label, .required {
+        font-size: 17px;
+    }
+    .form_tour>div{
+        width: 100%;
+    }
+    .form_nom>.required{
+        width: 98%;
+    }
+    .form_heure>label,
+    .form_nb_personne>label, 
+    .form_deroulement>label, 
+    .form_nom_lieu>label {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form_ambiance>label {
+        width: 96%;
+    }
+    .personne {
+        width: 128px;
+        font-size: 14px;
+    }
+    #formulaire_champ_libre {
+        width: 90%;
+    }
+    .formulaire h1 {
+        font-size: 28px;
+        width: 90%;
+        margin: 15px auto;
+    }
+    #form_entreprise_type {
+        width: 80%;
+        margin: 13px;
+    }
+    .formulaire {
+        position: relative;
+        /*top: 326px;*/
+        text-align: center;
+        width: 100%;
+    }
+    #formulaire_code_postal {
+        width: 80%;
+    }
+    .btn-postal {
+        width: 90%;
+        margin-top:5px;
+}
+    .ul_code_postal {
+        width: 87%;
+    }
+    .form_tour {
+        overflow: visible;
+    }
+    #body {
+        height: 100vh;
+display: table-cell;
+vertical-align: middle;
+    }
+}
+@media screen and (max-width: 481px) {
+    .popup {
+        width: 100%;
+        height: 111%;
+        border-radius: 0;
+        top: 18%;
+    }
+}
+@media screen and (max-width: 466px) {
+    .popup {
+        width: 100%;
+        height: 111%;
+        border-radius: 0;
+        top: 13%;
+    }
+    #formulaire {
+        top: 13%;
+    }
+}
+@media screen and (max-width: 449px) { 
+    .popup {
+        top: 14%;
+        height: 113%;
+    }
+    #formulaire {
+        top: 13%;
+    }
+    .imgOptions img {
+        width: 114px;
+        height: 84px;
+    }
+    #form_entreprise_options>label {
+        height: 84px;
+        padding: 20px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 430px) {
+    #formulaire h2 {
+        font-size: 18px;
+        margin: 30px auto 0;
+    }
+    .btn-retour, #formulaire_go, .btn {
+        width: 50%;
+    }
+    .buttonFlex {
+        padding: 0;
+    }
+    #formulaire_budget option{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .mois {
+        font-size: 16px;
+    }
+    #formulaire_nom, 
+    #formulaire_prenom,
+    #formulaire_budget,
+    #formulaire_email {
+        width: 83%;
+    }
+    #formulaire_nom_du_lieu {
+        width: 80%;
+    }
+    #formulaire_numero {
+        font-size: 16px;
+        width: 80%;
+    }
+    .select {
+        margin: 0 0 75%;
+    }
+    #formulaire_heure_de_debut {
+        margin: 0 auto 67%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 74%;
+    }
+}
+@media screen and (max-width: 370px) {
+    .bouttonD {
+        right: 22%;
+        top: 148px;
+    }
+    .bouttonG {
+        left: 23%;
+    }
+    #formulaire_ambiance {
+        margin: 0 0 66%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .select {
+        margin: 0 0 90%;
+    }
+    #formulaire_deroulement {
+        margin: 0 0 89%;
+    }
+    #formulaire_nb_personne {
+        margin-bottom: 78%;
+    }
+    #formulaire_ambiance {
+        width: 90%;
+    }
+    #formulaire_numero {
+        margin-bottom: 71%;
+    }
+}
+@media screen and (max-width: 449px) {
+    #formulaire {
+        top: 13%;
+    }
+    .select {
+        margin: 0 0 110%;
+    }
+    #form_entreprise_nom_du_lieu {
+        margin-bottom: 0;
+    }
+    #form_entreprise_nb_partie,
+    #form_entreprise_public,
+    #form_entreprise_theme,
+    #form_entreprise_style_dj,
+    #form_entreprise_vetement_dj,
+    #form_entreprise_fonction,
+    #form_entreprise_nom_responsable,
+    #form_entreprise_email_chef,
+    #form_entreprise_numero_chef,
+    #form_entreprise_nom,
+    #form_entreprise_numero,
+    #form_entreprise_repas_dj{
+        margin-bottom: 0;
+    }
+    #form_entreprise_adresse {
+        margin-bottom: 110%;
+    }
+    .btn-get,
+    #form_entreprise_go {
+        left: 26%;
+        bottom: 2%;
+    }
+    label[for=form_entreprise_formule_0]:hover,
+    label[for=form_entreprise_formule_1]:hover,
+    label[for=form_entreprise_formule_2]:hover,
+    label[for=form_entreprise_nb_personne_formule_0]:hover,
+    label[for=form_entreprise_nb_personne_formule_1]:hover,
+    label[for=form_entreprise_nb_personne_formule_2]:hover,
+    label[for=form_entreprise_duree_formule_0]:hover,
+    label[for=form_entreprise_duree_formule_1]:hover,
+    label[for=form_entreprise_duree_formule_2]:hover {
+        width: 553px;
+        height: 301px;
+    }
+}
+
+@media (max-width: 768px){
+    .popup{top: 0px !important;
+height: 100vh !important;
+margin: 0px;transform: none;
+left: 0px;}
+#popup-base{height: auto;}
+.popup-h4{margin-top:0px;}
+.btn-popup {
+    margin-top: 0px;
+}
+
+.formulaire{
+   position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    text-align: center;
+}
+#formulaire{top:0px;left:0px;transform: none;}
+.form_tour {
+    height: 65%;
+    overflow: scroll !important;
+}
+.mois{background: #fff;
+padding-top: 10px;
+padding-bottom: 10px;}
+.buttonFlex{position: fixed;
+bottom: 0px;
+width: 100%;
+left: 0px;
+background: #fff;}
+#formulaire h2 {
+    margin: 10px auto 0;
+}
+.mois {
+    top: 110px;
+}
+.bouttonG, .bouttonD {
+    top: 96px;
+}
+#calendrier {
+    margin: 82px auto 29%;
+}
+.popup_cancel{width: 100%}
+#formulaire_nom_du_lieu{margin-top:10px !important;}
+#formulaire_heure_de_debut_hour, #formulaire_heure_de_debut_minute{padding: 0px;}
+.form_heure, .form_nom_lieu {
+    margin-top: 50px;
+}
+#formulaire_deroulement {
+    margin: 0 0 50%;
+}
+.form_nb_personne, .form_deroulement {
+    margin-top: 50px;
+}
+#formulaire_nb_personne {
+    margin-bottom: 50%;
+}
+#formulaire_ambiance {
+    margin: 0 0 50%;
+}
+.form_nom,
+.form_email,
+.form_ambiance {
+    margin: 50px auto 0px auto;
+}
+.form_numero {
+    margin-top: -5px;
+}
+
+#formulaire_numero {
+    margin-bottom: 50px;
+}
+#formulaire_go{position: fixed;
+width: 90%;
+left: 0px;
+bottom: -10px;
+left: 5%;}
+.form_numero .required {
+    margin: 30px 0 20px 0;
+}
+/* .form_nom .buttonFlex{position: relative;
+bottom: 0px;
+width: 100%;
+left: 0px;
+background: #fff;} */
+}

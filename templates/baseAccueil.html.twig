@@ -1,0 +1,18 @@
+{% extends "baseForm.html.twig" %}
+{% block code %}
+    <h1>Pour quel évènement avez-vous besoin d'un Dj ?</h1>
+    <div class="flexImg">
+        <div class="baseImg">
+            <a href="{{ path('mariage') }}">
+                <img src="{{ 'img/alliance.svg' }}" alt="" width="150px" height="200px">
+                <p>Mariage</p>
+            </a>
+        </div>
+        <div class="baseImg">
+            <a href="{{ path('soiree-d-entreprise') }}">
+                <img src="{{ 'img/profil.svg' }}" alt="" width="150px" height="200px">
+                <p>Soirée d'entreprise</p>
+            </a>
+        </div>
+    </div>
+{% endblock %}

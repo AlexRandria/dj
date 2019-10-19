@@ -1,0 +1,979 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+ul{
+    list-style: none;
+}
+input:focus,
+textarea:focus,
+button:focus{
+    outline: 0;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 315px;
+    margin-bottom: 30px;
+}
+.cache{
+    z-index: 100;
+    width: 36px;
+    height: 43px;
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.select{
+    width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    cursor: pointer;
+    overflow: auto;
+    font-size: 15px;
+    font-weight: normal;
+}
+#body{
+    background-image: url("../img/djFond.jpg");
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.562);
+    overflow: hidden;
+}
+.formulaire{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+.formulaire h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px
+}
+.evenementH1 {
+    width: 600px;
+}
+#form_entreprise_type {
+    width: 517px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    cursor: pointer;
+    overflow: auto;
+    height: 55px;
+}
+#formulaire_code_postal{
+    cursor: pointer;
+    width: 535px;
+    height: 55px;
+    padding: 5px 15px;
+}
+
+.baseImg {
+    width: 200px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 41px;
+}
+
+.baseImg:hover{
+    background-color: black;
+    color: white;
+}
+
+.baseImg img{
+    border-bottom: 1px solid;
+}
+
+.baseImg a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.baseImg p {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.baseImg a:hover{
+    color: white;
+}
+
+.flexImg {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-postal{
+    cursor: pointer;
+    background: #ec407a ;
+    border: 0px solid #d7dada;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 17px;
+    width: 530px;
+    transition: all ease-in-out .3s;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.40);
+    margin-top: 20px;
+}
+.btn-postal:hover {
+    background: #a82c56;
+}
+/* Code postal */
+.ul_code_postal{
+    margin-top: 100px;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    width: 535px;
+    overflow: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+.li_code_postal{
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+.li_code_postal:hover{
+    background-color: grey;
+}
+/* FIN Code postal */
+/* Progress bar */
+.progress{
+    height: 20px;
+    margin: 20px auto 15px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    width: 450px;
+    background-color: #701e3971;
+}
+.progress-bar{
+    background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-color: #701e39;
+    animation: progress-bar-stripes 2s linear infinite;
+    color: rgba(0, 0, 0, 0);
+    transition: width 0.6s ease;
+}
+.sr-only{
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+#popup-base{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.692);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+.popup_cancel_base{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.473);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 120;
+}
+.popup_cancel{
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    z-index: 130;
+    border-radius: 5px;
+    color: rgb(209, 209, 209);
+    background-color: white;
+}
+.poursuivre{
+    color: black;
+    margin-top: 40px;
+    width: 350px;
+    margin: 40px auto 0;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #e4e4e4;
+    cursor: pointer;
+    font-size: 15px;
+}
+.text_cancel{
+    color: black;
+    margin: 34px 22px;
+    font-weight: bold;
+}
+.annuler{
+    color: black;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #e4e4e4;
+    cursor: pointer;
+    color: red;
+    font-size: 15px;
+}
+.cancel{
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 15px;
+}
+.popup-get,
+.popup{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    z-index: 100;
+    background-color: #ec407a;
+    border-radius: 5px;
+    color: rgb(209, 209, 209);
+}
+.form_tour{
+    overflow: auto;
+}
+.popup-h4{  
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 40%;
+    padding: 0 30px;
+    color: white;
+}
+.popup-get .popup-h4 {
+    font-size: 19px;
+    margin-top: 38%;
+}
+#form_entreprise_go,
+.btn-popup{
+    cursor: pointer;
+    background: white ;
+    border: 0px solid #d7dada !important;
+    color: #a82c56;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    font-size: 15px !important;
+    padding: 17px !important;
+    width: 230px !important;
+    transition: all ease-in-out .3s !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.40) !important;
+    margin-top: 20%;
+}
+#form_entreprise_go{
+    margin-top: 15%;
+}
+#form_entreprise_go:hover,
+.btn-popup:hover{
+    background-color: rgb(209, 209, 209);
+}
+/* z-index */
+.btn2 {
+    z-index: 100;
+}
+.btn3 {
+    z-index: 90;
+}
+.btn4 {
+    z-index: 80;
+}
+.btn5 {
+    z-index: 70;
+}
+.btn6 {
+    z-index: 60;
+}
+.btn7 {
+    z-index: 50;
+}
+.btn8 {
+    z-index: 40;
+}
+#formulaire {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    z-index: 110;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+#formulaire h2{
+    margin-top: 30px;
+    font-size: 22px;
+}
+/* Calendrier */
+.form_calendrier>h2{
+    width: 550px;
+    font-weight: bold;
+}
+.form_nom{
+    width: 100%;
+    margin: auto;
+}
+.form_calendrier,
+.form_nom_lieu{
+    transition: margin-left 0.6s ease;
+}
+
+#calendrier{
+    width: 350px;
+    margin: 70px auto 36px;}
+button,
+table{
+    border-collapse: collapse;
+}
+thead tr td {
+    font-weight: bold;
+}
+tr {
+    margin-top: 2px;
+}
+td {
+    text-align: center;
+    height: 40px;
+    width: 50px;
+    margin: 1px;
+    color: rgb(126, 126, 126);
+    background-color: rgb(236, 236, 236)
+}
+.vide{
+    border:none;
+    color: rgb(199, 199, 199);
+}
+.bouttonD{
+    position: absolute;
+    font-size: 25px;
+    right: 180px;
+    top: 110px;
+    cursor: pointer;
+    z-index: 100;
+    margin-top: 30px;
+}
+.bouttonG{
+    position: absolute;
+    font-size: 25px;
+    left: 180px;
+    top: 110px;
+    cursor: pointer;
+    z-index: 100;
+    margin-top: 30px;
+}
+.mois{
+    width: 280px;
+    text-align: center;
+    position: absolute;
+    left: 160px;
+    top: 110px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+tHead tr td,
+.moisSuivant,
+.apresOjd{
+    color: black;
+    background-color: white;
+}
+.moisSuivant,
+.apresOjd {
+    cursor: pointer;
+}
+.moisSuivant:hover,
+.apresOjd:hover{
+    background-color: rgb(167, 167, 167);
+}
+.selected{
+    background-color: rgb(141, 141, 141);
+}
+#formulaire_go,
+.btn{
+    cursor: pointer;
+    padding: 17px;
+    background: #a82c56;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    border: 0px solid white;
+    font-weight: bold;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.40);
+    font-size: 15px;
+    position: relative;
+    min-height: 50px;
+}
+#formulaire_go:hover ,
+.btn:hover{
+    background-color: #701e39;
+}
+.form_tour{
+    width: 550px;
+    margin: 0 auto;
+    height: 451px;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    display: flex;
+    background: white;
+}
+/* Fin Calendrier */
+/* Nom lieu */
+#formulaire_heure_de_debut{
+    padding: 10px;
+    width: 200px;
+}
+#formulaire_go,
+.btn-nom{
+    display: block;
+    margin: 20px 10px;
+}
+.btn-retour{
+    width: 200px;
+    position: relative;
+    margin: 20px 10px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.40);
+    min-height: 50px;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    border: 0px solid white;
+}
+#form_entreprise_formule,
+#form_entreprise_nb_personne_formule,
+#form_entreprise_duree_formule {
+    display: flex;
+    justify-content: space-around;
+}
+#form_entreprise_nb_personne_formule,
+#form_entreprise_duree_formule {
+    margin-bottom: 129px;
+}
+.btn-retour:hover{
+    background: rgb(240, 240, 240);
+}
+.imgOptions {
+    width: 250px;
+}
+.imgFlex{
+    display: flex;
+}
+#form_entreprise_options>label {
+    padding: 35px;
+    margin-left: 7px;
+    height: 120px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#form_entreprise_options>label:hover {
+    background-color: #a82c56;
+}
+.selectedOptions {
+    background-color: #a82c56;
+}
+.imgOptions img {
+    display: block;
+    margin-left: 57px;
+    margin-bottom: 20px;
+}
+.form_email>label,
+.form_nom>label,
+.form_nom_lieu>label,
+.form_nom_du_lieu,
+.form_formule>label,
+.form_personne>label,
+label[for=form_entreprise_theme],
+.form_fonction>label,
+.required{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 50px 0 20px 0;
+}
+.form_formule>label{
+    margin: 38px 0 20px 0;
+}
+.form_formule {
+    display: block;
+    width: 100%;
+}
+.form_options{
+    width: 100%;
+}
+.form_fonction{
+    width: 100%;
+}
+#form_entreprise_adresse {
+    margin-bottom: 40px;
+}
+#form_entreprise_heure_debut_hour,
+#form_entreprise_heure_debut_minute {
+    padding: 10px 10px 10px 5px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    width: 61px;
+    height: 42px;
+}
+label[for=form_entreprise_adresse_du_lieu] {
+    display: block;
+    padding: 50px 0 20px;
+}
+
+label[for=form_entreprise_nom_du_lieu] {
+    display: block;
+    padding-bottom: 20px;
+}
+input[type=checkbox] {
+    display:none;
+}
+label[for=form_entreprise_formule_0],
+label[for=form_entreprise_formule_1],
+label[for=form_entreprise_formule_2],
+label[for=form_entreprise_nb_personne_formule_0],
+label[for=form_entreprise_nb_personne_formule_1],
+label[for=form_entreprise_nb_personne_formule_2]
+label[for=form_entreprise_duree_formule_0],
+label[for=form_entreprise_duree_formule_1],
+label[for=form_entreprise_duree_formule_2] {
+    width: 37%;
+}
+.form_budget>label{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 50px auto 20px;
+    width: 90%;
+}
+.form_calendrier{
+    transition: all .6s ease;
+    width: 100%;
+}
+.form_heure,
+.form_nom_lieu{
+    margin-top: 120px;
+    width: 100%;
+}
+.form_nom_lieu>label{
+    font-weight: bold;
+}
+#form_entreprise_format {
+    margin-bottom: 60px;
+}
+.form_nom>.required{
+    font-size: 20px;
+    width: 350px;
+    margin: 65px auto 10px;
+}
+.phrase{
+    font-size: 13px;
+}
+
+.form_dj {
+    width: 100%;
+}
+#form_entreprise_nb_personne,
+#formulaire_nb_personne,
+#form_entreprise_age{
+    -webkit-appearance: none;
+    width: 300px;
+    background: #a82c5550;
+    border-radius: 1.5rem;
+    height: 10px;
+    margin-top: 20px;
+    margin: 38px auto;
+}
+#form_entreprise_nb_personne{
+    margin-bottom: 0;
+}
+#form_entreprise_nb_personne_formule>label,
+#form_entreprise_duree_formule>label {
+    padding: 50px 0 18px;
+    margin: 0;
+}
+#form_entreprise_nb_personne, #form_entreprise_age {
+    -webkit-appearance: none;
+    width: 300px;
+    background: #a82c5550;
+    border-radius: 1.5rem;
+    height: 10px;
+    margin-top: 20px;
+    text-align: center;
+    margin: 35px auto;
+}
+.form_email {
+    display: block;
+    margin: 120px auto 20px auto;
+    width: 100%;
+}
+#formulaire_heure_de_debut {
+    margin: 0 auto 32%;
+}
+#formulaire_deroulement{
+    margin: 0 0 36%;
+}
+.form_evenement {
+    width: 100%;
+}
+label[for=form_entreprise_nb_personne_formule_placeholder],
+#form_entreprise_nb_personne_formule_placeholder {
+    display: none;
+}
+#formulaire_heure_de_debut_hour,
+#formulaire_heure_de_debut_minute {
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    width: 61px;
+    height: 42px;
+}
+#form_entreprise_age{
+    margin-bottom: 0;
+}
+.btn-primary {
+    cursor: pointer;
+    padding: 17px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    width: 200px;
+    border: 0px solid white;
+    font-weight: bold;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.40);
+    font-size: 15px;
+    position: relative;
+    min-height: 50px;
+}
+.imgdj {
+    display: flex;
+    justify-content: space-around;
+}
+input[type=radio]{
+    display: none;
+}
+label[for=form_entreprise_formule_0]{
+    width: 168px;
+    height: 208px;
+    background-image: url(../img/dj-set1.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    transition: 1.5s;
+}
+label[for=form_entreprise_formule_1]{
+    width: 168px;
+    color: #d7dada00;
+    height: 208px;
+    background-image: url(../img/dj-set2.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1.5s;
+}
+label[for=form_entreprise_formule_2]{
+    width: 168px;
+    color: #d7dada00;
+    height: 208px;
+    background-image: url(../img/dj-set3.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1.5s;
+}
+#form_entreprise_options {
+    padding: 0;
+    border-radius: 0px;
+    margin-right: 55px;
+    border: 0;
+    padding-right: 10px;
+    overflow: hidden;
+}
+label[for=form_entreprise_options_3] {
+    margin-bottom: 0;
+    padding-top: 18px !important;
+}
+label[for=form_entreprise_options_0],
+label[for=form_entreprise_options_1],
+label[for=form_entreprise_options_2],
+label[for=form_entreprise_options_3] {
+    border: 1px solid #e4e4e4;
+}
+label[for=form_entreprise_nb_personne_formule_0]{
+    width: 168px;
+    height: 208px;
+    background-image: url(../img/30p.png);
+    background-size: cover;
+    margin: 0 auto;
+    color: #d7dada00;
+    cursor: pointer;
+    display: block;
+    transition: 1.5s;
+}
+label[for=form_entreprise_nb_personne_formule_1]{
+    width: 168px;
+    height: 208px;
+    background-image: url(../img/80p.png);
+    background-size: cover;
+    margin: 0 auto;
+    color: #d7dada00;
+    cursor: pointer;
+    display: block;
+    transition: 1.5s;
+}
+label[for=form_entreprise_nb_personne_formule_2]{
+    width: 168px;
+    height: 208px;
+    background-image: url(../img/120p.png);
+    background-size: cover;
+    margin: 0 auto;
+    color: #d7dada00;
+    cursor: pointer;
+    display: block;
+    transition: 1.5s;
+}
+label[for=form_entreprise_duree_formule_0]{
+    width: 168px;
+    color: #d7dada00;
+    height: 208px;
+    background-image: url(../img/4h.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1.5s;
+}
+label[for=form_entreprise_duree_formule_1]{
+    width: 168px;
+    color: #d7dada00;
+    height: 208px;
+    background-image: url(../img/5h.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1.5s;
+}
+label[for=form_entreprise_duree_formule_2]{
+    width: 168px;
+    color: #d7dada00;
+    height: 208px;
+    background-image: url(../img/6h.png);
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1.5s;
+}
+.selectedRadio,
+.selectedPersonneRadio,
+.selectedDureeRadio,
+.selectedHabillageRadio{
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.562);
+}
+label[for=form_entreprise_formule_0]:hover,
+label[for=form_entreprise_formule_1]:hover,
+label[for=form_entreprise_formule_2]:hover,
+label[for=form_entreprise_nb_personne_formule_0]:hover,
+label[for=form_entreprise_nb_personne_formule_1]:hover,
+label[for=form_entreprise_nb_personne_formule_2]:hover,
+label[for=form_entreprise_duree_formule_0]:hover,
+label[for=form_entreprise_duree_formule_1]:hover,
+label[for=form_entreprise_duree_formule_2]:hover {
+    width: 550px;
+    height: 350px;
+}
+label[for=form_entreprise_ambiance_fin],
+label[for=form_entreprise_ambiance],
+label[for=form_entreprise_nationalite] {
+    margin: 32px 0 20px 0;
+}
+#form_entreprise_nb_personne::-webkit-slider-thumb,
+#formulaire_nb_personne::-webkit-slider-thumb,
+#form_entreprise_age::-webkit-slider-thumb{
+    -webkit-appearance:none; 
+    border:1px solid #ddd;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 0 .125rem #aaa;
+    border: 13px solid #a82c56;
+}
+#form_entreprise_habillage {
+    margin: 20px auto 50px;
+}
+label[for=form_entreprise_habillage_0] {
+    background-image: url(../img/white-dj.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin: 0 0 33px;
+    color: #d7dada00;
+    cursor: pointer;
+}
+label[for=form_entreprise_habillage_1] {
+    background-image: url(../img/black-dj.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    color: #d7dada00;
+    cursor: pointer;
+}
+label[for=form_entreprise_habillage_0]:hover,
+label[for=form_entreprise_habillage_1]:hover{
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.562);
+}
+#formulaire_nb_personne::-moz-range-thumb{
+    -webkit-appearance:none; 
+    border:1px solid #ddd;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 0 .125rem #aaa;
+    border: 13px solid #a82c56;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 9%;
+}
+#formulaire_champ_libre{
+    width: 400px;
+    height: 130px;
+    margin-bottom: 8%;
+}
+.form_ambiance{
+    margin: 120px auto 20px auto;
+    width: 100%;
+}
+#formulaire_ambiance{
+    margin: 0 0 34%;
+}
+#formulaire_nom {
+    margin-bottom: 150px;
+}
+.form_ambiance>label{
+    width: 500px;
+    margin: 35px auto 20px;
+}
+#formulaire_deroulement:nth-child(2){
+    font-size: 14px;
+}
+#formulaire_nom,
+#formulaire_prenom,
+#formulaire_budget{
+    margin: 0;
+}
+.form_budget{
+    width: 100%;
+    margin: 0 auto;
+}
+.form_nb_personne,
+.form_deroulement{
+    width: 100%;
+    margin-top: 120px;
+}
+.form_nb_personne>label,
+.form_deroulement>label,
+.form_nom_lieu>label,
+.form_heure>label,
+.form_nom_du_lieu>label{
+    width: 550px;
+    font-size: 20px;
+}
+#formulaire_deroulement{
+    margin: 0 0 36%;
+}
+.form_numero{
+    margin-top: 120px;
+}
+.form_numero p {
+    font-size: 12px;
+}
+#formulaire_numero{
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#formulaire_go {
+    margin: 0px;
+    padding: 0 67px;
+    position: fixed;
+    bottom: 2px;
+    left: 177px;
+    text-align: center;
+    font-size: 17px;
+}
+.btn-get {
+    margin: 0px;
+    position: fixed;
+    bottom: 20px;
+    left: 192px;
+    text-align: center;
+    font-size: 17px;
+}
+.buttonFlex{
+    display: flex;
+    margin: 0px;
+    padding: 0 50px;
+    position: fixed;
+    bottom: 2px;
+}
+#formulaire_ambiance{
+    margin: 0 0 35%;
+}
+.personne,
+.ans{
+    width: 158px;
+    margin: 15px auto;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#formulaire_go,
+.btn-first{
+    width: 230px;
+    margin: 20px auto;
+}
+/* Animation */
+@keyframes progress-bar-stripes{
+    from{
+        background-position:40px 0
+    }
+    to{
+        background-position:0 0
+    }
+}

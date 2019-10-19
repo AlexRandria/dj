@@ -1,0 +1,140 @@
+{% extends "baseForm.html.twig" %}
+{% block debut_form %}
+    {{ form_start(form) }}
+{% endblock %}
+{% block code %}
+    <h1>Comparez les tarifs des meilleurs Djs d'Occitanie</h1>
+    {{ form_widget(form.code_postal, {'attr': {'placeholder': 'Entrez votre code postal', 'style': 'border-radius: 7px;'}}) }}
+    <ul class="ul_code_postal" style="display:none;"></ul>
+    <button name="button" class="btn-postal" onclick="popup()">Valider</button>
+{% endblock %}
+{% block popup %}
+    <div class="popup" style="display:block" >
+        <img class="cancel"
+             src="{{ asset('img/cancel.svg') }}"
+             alt="Quitter"
+             onclick="cancel()">
+        <h4 class="popup-h4">Nous allons vous poser quelques questions afin de vous présenter Les meilleurs DJs.</h4>
+        <button name="button-popup" class="btn-popup" onclick="suivant()">Suivant</button>
+    </div>
+    <div class="popup_cancel_base" style="display:none">
+        <div class="popup_cancel">
+            <img class="cancel"
+             src="{{ asset('img/cancel2.svg') }}"
+             alt="Quitter"
+             onclick="poursuivre()">
+            <div class="text_cancel">N'arrêtez pas maintenant. Vous avez complété 12% de votre demande</div>
+            <div class="poursuivre" onclick="poursuivre()">Poursuivre le formulaire</div>
+            <div class="annuler" onclick="reload()">Annuler le formulaire</div>
+        </div>
+    </div>
+{% endblock %}
+{% block formulaire %}
+    <img class="cancel"
+             src="{{ asset('img/cancel2.svg') }}"
+             alt="Quitter"
+             onclick="cancel()">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            <span class="sr-only">10%</span>
+        </div>
+    </div>
+    <div class="form_tour">
+        <div class="form_calendrier">
+            {{ form_widget(form.date, {'attr': {'style': 'display:none;'}}) }}
+            <h2>Quelle est la date de votre événement ?</h2>
+            <div id="calendrier" class="calendrier" style="display:block"></div>
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour2()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant2()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_nom_lieu" style="display:none">
+            {{ form_label(form.nom_du_lieu) }}
+            {{ form_widget(form.nom_du_lieu) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour3()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant3()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_heure" style="display:none">
+            {{ form_label(form.heure_de_debut) }}
+            {{ form_widget(form.heure_de_debut) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retourHeure()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivantHeure()">Suivant</button>
+            </div>        
+        </div>
+        <div class="form_deroulement" style="display:none">
+            {{ form_label(form.deroulement) }}
+            {{ form_widget(form.deroulement) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour4()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant4()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_nb_personne" style="display:none">
+            {{ form_label(form.nb_personne) }}
+            <div class="personne">80 Personnes</div>
+            {{ form_widget(form.nb_personne) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour5()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant5()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_ambiance" style="display:none">
+            {{ form_label(form.ambiance) }}
+            {{ form_widget(form.ambiance) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour6()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant6()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_budget" style="display:none">
+            {{ form_label(form.budget) }}
+            {{ form_widget(form.budget) }}
+            {{ form_label(form.champ_libre) }}
+            {{ form_widget(form.champ_libre) }}
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour7()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant7()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_nom" style="display:none">
+            {{ form_label(form.prenom) }}
+            {{ form_widget(form.prenom) }}
+            <div style="display:none">
+                {{ form_label(form.nom) }}
+                {{ form_widget(form.nom) }}
+            </div>
+            <div class="fake"></div>
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retour8()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivant8()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_email" style="display:none">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            <p class="phrase">Nous ne partageons pas votre Email avec les professionnels</p>
+            <div class="buttonFlex">
+                <button name="button-nom" class="btn-retour" onclick="retourEmail()">Retour</button>
+                <button name="button-popup" class="btn btn-nom" onclick="suivantEmail()">Suivant</button>
+            </div>
+        </div>
+        <div class="form_numero" style="display:none">
+            <div class="cache" style='display:none'></div>
+            {{ form_label(form.numero) }}
+            <p>Saisissez votre numéro de téléphone pour valider votre demande</p>
+            {{ form_widget(form.numero) }}
+            <p class="phrase_num">Nous ne partageons pas votre numéro de téléphone avec les professionnels</p>
+            {{ form_widget(form.go) }}
+        </div>
+    </div>
+    <div class="footer"></div>
+    <div class="copyright"></div>
+{% endblock %}
+{% block fin_form %}
+          {{ form_end(form) }}  
+{% endblock %}
+
