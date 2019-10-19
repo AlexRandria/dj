@@ -59,7 +59,6 @@ class AccueilController extends AbstractController {
             $formulaire->setAmbiance(implode(', ',$formulaire->getAmbiance())); 
             $formulaire->setAmbianceFin(implode(', ',$formulaire->getAmbianceFin())); 
             $formulaire->setOptions(implode(', ',$formulaire->getOptions())); 
-            var_dump($formulaire->getNationalite());
             $em = $this->getDoctrine()->getManager();
             $em->persist($formulaire);
             $em->flush();
