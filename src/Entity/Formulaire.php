@@ -9,51 +9,45 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Formulaire
 {
+    public function __construct(){
+        $this->date_capture = new \DateTime('now');
+    }
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private $id_formulaire;
 
-    /**
-     * @ORM\Column(type="string", length=30, nullable=true)
-     */
-    private $code_postal;
+    /** 
+    * @ORM\ManyToOne(targetEntity="Formulaire_base", inversedBy="tabFormulaires") 
+    * @ORM\JoinColumn(name="id_formulaire_base", referencedColumnName="id_formulaire_base") 
+    */
+    private $formulaire_base;
 
-    /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $date;
+     /** 
+    * @ORM\ManyToOne(targetEntity="CodePostal", inversedBy="tabFormulaires") 
+    * @ORM\JoinColumn(name="id_code_postal", referencedColumnName="id_code_postal") 
+    */
+    private $codePostal;
 
-    /**
-     * @ORM\Column(type="string", length=45, nullable=true)
-     */
-    private $nom_du_lieu;
-
-    /**
-     * @ORM\Column(type="time", nullable=true)
-     */
-    private $heure_de_debut;
-
-    /**
-     * @ORM\Column(type="string", length=45, nullable=true)
-     */
+    /** 
+    * @ORM\ManyToOne(targetEntity="Deroulement", inversedBy="tabFormulaires") 
+    * @ORM\JoinColumn(name="id_deroulement", referencedColumnName="id_deroulement") 
+    */
     private $deroulement;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $nb_personne;
-
-    /**
-     * @ORM\Column(type="string", length=45, nullable=true)
-     */
+    /** 
+    * @ORM\ManyToOne(targetEntity="Ambiance", inversedBy="tabFormulaires") 
+    * @ORM\JoinColumn(name="id_ambiance", referencedColumnName="id_ambiance") 
+    */
     private $ambiance;
 
-    /**
-     * @ORM\Column(type="string", length=20, nullable=true)
-     */
+    /** 
+    * @ORM\ManyToOne(targetEntity="Budget", inversedBy="tabFormulaires") 
+    * @ORM\JoinColumn(name="id_budget", referencedColumnName="id_budget") 
+    */
     private $budget;
 
     /**
@@ -61,125 +55,9 @@ class Formulaire
      */
     private $champ_libre;
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
-    private $nom;
-
-    /**
-     * @ORM\Column(type="string", length=25, nullable=true)
-     */
-    private $prenom;
-
-    /**
-     * @ORM\Column(type="string", length=35, nullable=true)
-     */
-    private $email;
-
-    /**
-     * @ORM\Column(type="string", length=35, nullable=true)
-     */
-    private $numero;
-
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getCodePostal(): ?string
-    {
-        return $this->code_postal;
-    }
-
-    public function setCodePostal(?string $code_postal): self
-    {
-        $this->code_postal = $code_postal;
-
-        return $this;
-    }
-
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(?\DateTimeInterface $date): self
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    public function getNomDuLieu(): ?string
-    {
-        return $this->nom_du_lieu;
-    }
-
-    public function setNomDuLieu(?string $nom_du_lieu): self
-    {
-        $this->nom_du_lieu = $nom_du_lieu;
-
-        return $this;
-    }
-
-    public function getHeureDeDebut(): ?\DateTimeInterface
-    {
-        return $this->heure_de_debut;
-    }
-
-    public function setHeureDeDebut(?\DateTimeInterface $heure_de_debut): self
-    {
-        $this->heure_de_debut = $heure_de_debut;
-
-        return $this;
-    }
-
-    public function getDeroulement(): ?string
-    {
-        return $this->deroulement;
-    }
-
-    public function setDeroulement(?string $deroulement): self
-    {
-        $this->deroulement = $deroulement;
-
-        return $this;
-    }
-
-    public function getNbPersonne(): ?int
-    {
-        return $this->nb_personne;
-    }
-
-    public function setNbPersonne(?int $nb_personne): self
-    {
-        $this->nb_personne = $nb_personne;
-
-        return $this;
-    }
-
-    public function getAmbiance(): ?string
-    {
-        return $this->ambiance;
-    }
-
-    public function setAmbiance(?string $ambiance): self
-    {
-        $this->ambiance = $ambiance;
-
-        return $this;
-    }
-
-    public function getBudget(): ?string
-    {
-        return $this->budget;
-    }
-
-    public function setBudget(?string $budget): self
-    {
-        $this->budget = $budget;
-
-        return $this;
     }
 
     public function getChampLibre(): ?string
@@ -194,50 +72,99 @@ class Formulaire
         return $this;
     }
 
-    public function getNom(): ?string
+    /**
+     * Get the value of ambiance
+     */ 
+    public function getAmbiance()
     {
-        return $this->nom;
+        return $this->ambiance;
     }
 
-    public function setNom(?string $nom): self
+    /**
+     * Set the value of ambiance
+     *
+     * @return  self
+     */ 
+    public function setAmbiance($ambiance)
     {
-        $this->nom = $nom;
+        $this->ambiance = $ambiance;
+        return $this;
+    }
+
+    /**
+     * Get the value of deroulement
+     */ 
+    public function getDeroulement()
+    {
+        return $this->deroulement;
+    }
+
+    /**
+     * Set the value of deroulement
+     *
+     * @return  self
+     */ 
+    public function setDeroulement($deroulement)
+    {
+        $this->deroulement = $deroulement;
+        return $this;
+    }
+
+    /**
+     * Get the value of budget
+     */ 
+    public function getBudget()
+    {
+        return $this->budget;
+    }
+
+    /**
+     * Set the value of budget
+     *
+     * @return  self
+     */ 
+    public function setBudget($budget)
+    {
+        $this->budget = $budget;
+        return $this;
+    }
+
+    /**
+     * Get the value of codePostal
+     */ 
+    public function getCodePostal()
+    {
+        return $this->codePostal;
+    }
+
+    /**
+     * Set the value of codePostal
+     *
+     * @return  self
+     */ 
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    /**
+     * Get the value of formulaire_base
+     */ 
+    public function getFormulaireBase()
     {
-        return $this->prenom;
+        return $this->formulaire_base;
     }
 
-    public function setPrenom(?string $prenom): self
+    /**
+     * Set the value of formulaire_base
+     *
+     * @return  self
+     */ 
+    public function setFormulaireBase($formulaire_base)
     {
-        $this->prenom = $prenom;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(?string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    public function getNumero(): ?string
-    {
-        return $this->numero;
-    }
-
-    public function setNumero(?string $numero): self
-    {
-        $this->numero = $numero;
+        $this->formulaire_base = $formulaire_base;
 
         return $this;
     }

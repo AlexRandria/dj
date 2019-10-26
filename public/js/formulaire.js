@@ -2,7 +2,7 @@
 let select = '';
 let pourcentage = '';
 function popup() {
-    let input = document.querySelector('#formulaire_code_postal');
+    let input = document.querySelector('#formulaire_codePostal');
     let tabLi = document.querySelectorAll('.li_code_postal');
     tabLi.forEach(li => {
         if(input.value == li.textContent) {
@@ -56,7 +56,7 @@ function retour2(){
 }
 
 function suivant3() {
-    let input = document.querySelector('#formulaire_nom_du_lieu');
+    let input = document.querySelector('#formulaire_formulaire_base_nom_du_lieu');
     if(input.value !== '') {
         document.querySelector('.form_nom_lieu').style = 'display:none';
         document.querySelector('.form_heure').style = 'display:block';
@@ -69,8 +69,8 @@ function retour3(){
     progressBarRetour();
 }
 function suivantHeure() {
-    let heure = document.querySelector('#formulaire_heure_de_debut_hour');
-    let minute = document.querySelector('#formulaire_heure_de_debut_minute');
+    let heure = document.querySelector('#formulaire_formulaire_base_heure_de_debut_hour');
+    let minute = document.querySelector('#formulaire_formulaire_base_heure_de_debut_minute');
     console.log(heure.value);
     if (heure.value !== '0' || minute.value !== '0') {
         document.querySelector('.form_heure').style = 'display:none';
@@ -133,8 +133,8 @@ function retour7(){
     progressBarRetour();
 }
 function suivant8() {
-    let prenom = document.querySelector('#formulaire_prenom');
-    let nom = document.querySelector('#formulaire_nom');
+    let prenom = document.querySelector('#formulaire_formulaire_base_prenom');
+    let nom = document.querySelector('#formulaire_formulaire_base_nom');
     if(prenom.value !== '') {
         document.querySelector('.form_nom').style = 'display:none';
         document.querySelector('.form_email').style = 'display:block';
@@ -152,7 +152,7 @@ function retour8(){
     progressBarRetour();
 }
 function suivantEmail() {
-    let email = document.querySelector('#formulaire_email');
+    let email = document.querySelector('#formulaire_formulaire_base_email');
     let regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
     if(regex.test(email.value)) {
         document.querySelector('.form_email').style = 'display:none';
@@ -183,17 +183,17 @@ function recuperation(date, num) {
     let td = document.querySelector(`#td${num}`);
     td.classList.add('selected');
     select = date;
-    let div = document.querySelector('#formulaire_date');
+    let div = document.querySelector('#formulaire_formulaire_base_date');
     div.value = date;
 }
 let body = document.querySelector('#body');
 body.addEventListener('click', () => {
     let ul = document.querySelector('.ul_code_postal');
     ul.style = "display:none";
-    let input = document.querySelector('#formulaire_code_postal');
+    let input = document.querySelector('#formulaire_codePostal');
     input.style = "border-radius:7px"
 })
-let input = document.querySelector('#formulaire_code_postal');
+let input = document.querySelector('#formulaire_codePostal');
 input.addEventListener('mouseover', () => {
     let ul = document.querySelector('.ul_code_postal');
     ul.style = "display:block; height:200px";

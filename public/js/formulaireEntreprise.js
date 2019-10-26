@@ -11,9 +11,9 @@ function cancel() {
 function reload() {
     location.href = "https://www.oneclickdj.fr/";
 }
-let radio3 = document.querySelector('[for="form_entreprise_formule_2"]');
-let radio2 = document.querySelector('[for="form_entreprise_formule_1"]');
-let radio1 = document.querySelector('[for="form_entreprise_formule_0"]');
+let radio3 = document.querySelector('[for="form_entreprise_formule_3"]');
+let radio2 = document.querySelector('[for="form_entreprise_formule_2"]');
+let radio1 = document.querySelector('[for="form_entreprise_formule_1"]');
 let form_duree = document.querySelector('.form_duree');
 let form_personne = document.querySelector('.form_personne');
 radio3.addEventListener('click', () => {
@@ -43,9 +43,9 @@ radio1.addEventListener('click', () => {
         form_personne.style = 'display:none';
     document.querySelector('.form_duree').style = 'display:block';
 });
-let radioPersonne3 = document.querySelector('[for="form_entreprise_nb_personne_formule_2"]');
-let radioPersonne2 = document.querySelector('[for="form_entreprise_nb_personne_formule_1"]');
-let radioPersonne1 = document.querySelector('[for="form_entreprise_nb_personne_formule_0"]');
+let radioPersonne3 = document.querySelector('[for="form_entreprise_nb_personne_formule_3"]');
+let radioPersonne2 = document.querySelector('[for="form_entreprise_nb_personne_formule_2"]');
+let radioPersonne1 = document.querySelector('[for="form_entreprise_nb_personne_formule_1"]');
 radioPersonne1.addEventListener('click', () => {
     let selected = document.querySelector('.selectedPersonneRadio');
     if (selected)
@@ -67,9 +67,9 @@ radioPersonne3.addEventListener('click', () => {
     radioPersonne3.classList.add('selectedPersonneRadio');
     document.querySelector('.form_duree').style = 'display:block';
 });
-let radioDuree3 = document.querySelector('[for="form_entreprise_duree_formule_2"]');
-let radioDuree2 = document.querySelector('[for="form_entreprise_duree_formule_1"]');
-let radioDuree1 = document.querySelector('[for="form_entreprise_duree_formule_0"]');
+let radioDuree3 = document.querySelector('[for="form_entreprise_duree_formule_3"]');
+let radioDuree2 = document.querySelector('[for="form_entreprise_duree_formule_2"]');
+let radioDuree1 = document.querySelector('[for="form_entreprise_duree_formule_1"]');
 radioDuree1.addEventListener('click', () => {
     let selected = document.querySelector('.selectedDureeRadio');
     if (selected)
@@ -88,8 +88,8 @@ radioDuree3.addEventListener('click', () => {
         selected.classList.remove('selectedDureeRadio');
     radioDuree3.classList.add('selectedDureeRadio');
 });
-let radioHabillage1 = document.querySelector('[for="form_entreprise_habillage_0"]');
-let radioHabillage2 = document.querySelector('[for="form_entreprise_habillage_1"]');
+let radioHabillage1 = document.querySelector('[for="form_entreprise_habillage_1"]');
+let radioHabillage2 = document.querySelector('[for="form_entreprise_habillage_2"]');
 radioHabillage1.addEventListener('click', () => {
     let selected = document.querySelector('.selectedHabillageRadio');
     if (selected)
@@ -136,7 +136,7 @@ function retour2(){
 }
 
 function suivantNom() {
-    let input = document.querySelector('#form_entreprise_nom_du_lieu');
+    let input = document.querySelector('#form_entreprise_formulaire_base_nom_du_lieu');
     let input2 = document.querySelector('#form_entreprise_adresse_du_lieu');
     if(input.value !== '' && input2.value !== '') {
         document.querySelector('.form_nom_du_lieu').style = 'display:none';
@@ -160,8 +160,8 @@ function retourNom(){
     sr.textContent = progress.attributes[2].value+'%';
 }
 function suivantEvenement() {
-    let heure = document.querySelector('#form_entreprise_heure_debut_hour');
-    let minute = document.querySelector('#form_entreprise_heure_debut_minute');
+    let heure = document.querySelector('#form_entreprise_formulaire_base_heure_de_debut_hour');
+    let minute = document.querySelector('#form_entreprise_formulaire_base_heure_de_debut_minute');
     if (heure.value !== '0' || minute.value !== '0') {
         document.querySelector('.form_evenement').style = 'display:none';
         document.querySelector('.form_formule').style = 'display:block';
@@ -210,7 +210,7 @@ function retourFormule(){
 function suivantTheme() {
     let input = document.querySelector('#form_entreprise_theme');
     let span = document.querySelectorAll('.pull-left');
-    if (input.value != '' && span[0].textContent != 'Nothing selected' && span[1].textContent != 'Nothing selected' && span[2].textContent != 'Nothing selected' ) {
+    if (input.value != '' ) {
         document.querySelector('.form_theme').style = 'display:none';
         document.querySelector('.form_dj').style = 'display:block';
         let progress = document.querySelector('.progress-bar');
@@ -328,7 +328,7 @@ function suivantGet() {
     document.querySelector('#formulaire').style = 'display:none';
     document.querySelector('.popup-get').style = 'display:block';
 }
-let input_form = document.querySelector('#form_entreprise_nb_personne');
+let input_form = document.querySelector('#form_entreprise_formulaire_base_nb_personne');
 input_form.addEventListener('input', () => {
     let personne = document.querySelector('.personne');
     personne.textContent = `${input_form.value} Personnes`;
@@ -345,7 +345,7 @@ function recuperation(date, num) {
     let td = document.querySelector(`#td${num}`);
     td.classList.add('selected');
     select = date;
-    let div = document.querySelector('#form_entreprise_date');
+    let div = document.querySelector('#form_entreprise_formulaire_base_date');
     div.value = date;
 }
 String.prototype.ucFirst=function(){

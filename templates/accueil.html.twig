@@ -4,7 +4,7 @@
 {% endblock %}
 {% block code %}
     <h1>Comparez les tarifs des meilleurs Djs de votre région</h1>
-    {{ form_widget(form.code_postal, {'attr': {'placeholder': 'Entrez votre code postal', 'style': 'border-radius: 7px;'}}) }}
+    {{ form_widget(form.codePostal, {'attr': {'placeholder': 'Entrez votre code postal', 'style': 'border-radius: 7px;'}}) }}
     <ul class="ul_code_postal" style="display:none;"></ul>
     <button name="button" class="btn-postal" onclick="popup()">Valider</button>
 {% endblock %}
@@ -43,7 +43,7 @@
     </div>
     <div class="form_tour">
         <div class="form_calendrier">
-            {{ form_widget(form.date, {'attr': {'style': 'display:none;'}}) }}
+            {{ form_widget(form.formulaire_base.date, {'attr': {'style': 'display:none;'}}) }}
             <h2>Quelle est la date de votre événement ?</h2>
             <div id="calendrier" class="calendrier" style="display:block"></div>
             <div class="buttonFlex">
@@ -52,16 +52,16 @@
             </div>
         </div>
         <div class="form_nom_lieu" style="display:none">
-            {{ form_label(form.nom_du_lieu) }}
-            {{ form_widget(form.nom_du_lieu) }}
+            {{ form_label(form.formulaire_base.nom_du_lieu) }}
+            {{ form_widget(form.formulaire_base.nom_du_lieu) }}
             <div class="buttonFlex">
                 <button name="button-nom" class="btn-retour" onclick="retour3()">Retour</button>
                 <button name="button-popup" class="btn btn-nom" onclick="suivant3()">Suivant</button>
             </div>
         </div>
         <div class="form_heure" style="display:none">
-            {{ form_label(form.heure_de_debut) }}
-            {{ form_widget(form.heure_de_debut) }}
+            {{ form_label(form.formulaire_base.heure_de_debut) }}
+            {{ form_widget(form.formulaire_base.heure_de_debut) }}
             <div class="buttonFlex">
                 <button name="button-nom" class="btn-retour" onclick="retourHeure()">Retour</button>
                 <button name="button-popup" class="btn btn-nom" onclick="suivantHeure()">Suivant</button>
@@ -76,9 +76,9 @@
             </div>
         </div>
         <div class="form_nb_personne" style="display:none">
-            {{ form_label(form.nb_personne) }}
+            {{ form_label(form.formulaire_base.nb_personne) }}
             <div class="personne">80 Personnes</div>
-            {{ form_widget(form.nb_personne) }}
+            {{ form_widget(form.formulaire_base.nb_personne) }}
             <div class="buttonFlex">
                 <button name="button-nom" class="btn-retour" onclick="retour5()">Retour</button>
                 <button name="button-popup" class="btn btn-nom" onclick="suivant5()">Suivant</button>
@@ -103,11 +103,11 @@
             </div>
         </div>
         <div class="form_nom" style="display:none">
-            {{ form_label(form.prenom) }}
-            {{ form_widget(form.prenom) }}
+            {{ form_label(form.formulaire_base.prenom) }}
+            {{ form_widget(form.formulaire_base.prenom) }}
             <div style="display:none">
-                {{ form_label(form.nom) }}
-                {{ form_widget(form.nom) }}
+                {{ form_label(form.formulaire_base.nom) }}
+                {{ form_widget(form.formulaire_base.nom) }}
             </div>
             <div class="fake"></div>
             <div class="buttonFlex">
@@ -116,8 +116,8 @@
             </div>
         </div>
         <div class="form_email" style="display:none">
-            {{ form_label(form.email) }}
-            {{ form_widget(form.email) }}
+            {{ form_label(form.formulaire_base.email) }}
+            {{ form_widget(form.formulaire_base.email) }}
             <p class="phrase">Nous ne partageons pas votre Email avec les professionnels</p>
             <div class="buttonFlex">
                 <button name="button-nom" class="btn-retour" onclick="retourEmail()">Retour</button>
@@ -126,9 +126,9 @@
         </div>
         <div class="form_numero" style="display:none">
             <div class="cache" style='display:none'></div>
-            {{ form_label(form.numero) }}
+            {{ form_label(form.formulaire_base.numero) }}
             <p>Saisissez votre numéro de téléphone pour valider votre demande</p>
-            {{ form_widget(form.numero) }}
+            {{ form_widget(form.formulaire_base.numero) }}
             <p class="phrase_num">Nous ne partageons pas votre numéro de téléphone avec les professionnels</p>
             {{ form_widget(form.go) }}
         </div>

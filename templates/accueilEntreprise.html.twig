@@ -47,7 +47,7 @@
     </div>
     <div class="form_tour">
         <div class="form_calendrier">
-            {{ form_widget(form.date, {'attr': {'style': 'display:none'}}) }}
+            {{ form_widget(form.formulaire_base.date, {'attr': {'style': 'display:none'}}) }}
             <h2>Quelle est la date de votre événement ?</h2>
             <div id="calendrier" class="calendrier" style="display:block"></div>
             <div class="buttonFlex">
@@ -56,8 +56,8 @@
             </div>
         </div>
         <div class="form_nom_du_lieu" style="display:none">
-            {{ form_label(form.nom_du_lieu) }}
-            {{ form_widget(form.nom_du_lieu) }}
+            {{ form_label(form.formulaire_base.nom_du_lieu) }}
+            {{ form_widget(form.formulaire_base.nom_du_lieu) }}
             {{ form_label(form.adresse_du_lieu) }}
             {{ form_widget(form.adresse_du_lieu) }}
             <div class="buttonFlex">
@@ -66,11 +66,11 @@
             </div>        
         </div>
         <div class="form_evenement" style="display:none">
-            {{ form_label(form.heure_debut) }}
-            {{ form_widget(form.heure_debut) }}
-            {{ form_label(form.nb_personne) }}
+            {{ form_label(form.formulaire_base.heure_de_debut) }}
+            {{ form_widget(form.formulaire_base.heure_de_debut) }}
+            {{ form_label(form.formulaire_base.nb_personne) }}
             <div class="personne">40 Personnes</div>
-            {{ form_widget(form.nb_personne) }}
+            {{ form_widget(form.formulaire_base.nb_personne) }}
             {{ form_label(form.nb_partie) }}
             {{ form_widget(form.nb_partie) }}
             {{ form_label(form.format) }}
@@ -99,8 +99,8 @@
         <div class="form_theme" style="display:none">
             {{ form_label(form.theme) }}
             {{ form_widget(form.theme) }}
-            {{ form_label(form.public) }}
-            {{ form_widget(form.public) }}
+            {{ form_label(form.publique) }}
+            {{ form_widget(form.publique) }}
             {{ form_label(form.age) }}
             <div class="ans">18 ans</div>
             {{ form_widget(form.age) }}
@@ -157,15 +157,15 @@
             {{ form_widget(form.fonction) }}
             {{ form_label(form.nom_responsable) }}
             {{ form_widget(form.nom_responsable) }}
-            {{ form_label(form.email_chef) }}
-            {{ form_widget(form.email_chef) }}
+            {{ form_label(form.formulaire_base.email) }}
+            {{ form_widget(form.formulaire_base.email) }}
             {{ form_label(form.numero_chef) }}
             {{ form_widget(form.numero_chef) }}
             <p class="phrase">Les informations ci-dessous vont servir a établir votre devis</p>
-            {{ form_label(form.nom) }}
-            {{ form_widget(form.nom) }}
-            {{ form_label(form.numero) }}
-            {{ form_widget(form.numero) }}
+            {{ form_label(form.formulaire_base.nom) }}
+            {{ form_widget(form.formulaire_base.nom) }}
+            {{ form_label(form.formulaire_base.numero) }}
+            {{ form_widget(form.formulaire_base.numero) }}
             {{ form_label(form.adresse) }}
             {{ form_widget(form.adresse) }}
             <button name="btn-get" class="btn btn-get" onclick="suivantGet()">Ge in touch</button>    

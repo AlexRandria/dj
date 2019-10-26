@@ -67,7 +67,7 @@ button:focus{
     overflow: auto;
     height: 55px;
 }
-#formulaire_code_postal{
+#formulaire_codePostal{
     cursor: pointer;
     width: 535px;
     height: 55px;
@@ -456,7 +456,7 @@ tHead tr td,
 }
 /* Fin Calendrier */
 /* Nom lieu */
-#formulaire_heure_de_debut{
+#formulaire_formulaire_base_heure_de_debut{
     padding: 10px;
     width: 200px;
 }
@@ -497,11 +497,10 @@ tHead tr td,
 }
 #form_entreprise_options>label {
     padding: 35px;
-    margin-left: 7px;
     height: 120px;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 0 0 20px 7px;
 }
 #form_entreprise_options>label:hover {
     background-color: #a82c56;
@@ -609,7 +608,7 @@ label[for=form_entreprise_duree_formule_2] {
 .form_dj {
     width: 100%;
 }
-#form_entreprise_nb_personne,
+#form_entreprise_formulaire_base_nb_personne,
 #formulaire_nb_personne,
 #form_entreprise_age{
     -webkit-appearance: none;
@@ -620,7 +619,7 @@ label[for=form_entreprise_duree_formule_2] {
     margin-top: 20px;
     margin: 38px auto;
 }
-#form_entreprise_nb_personne{
+#form_entreprise_formulaire_base_nb_personne{
     margin-bottom: 0;
 }
 #form_entreprise_nb_personne_formule>label,
@@ -628,7 +627,7 @@ label[for=form_entreprise_duree_formule_2] {
     padding: 50px 0 18px;
     margin: 0;
 }
-#form_entreprise_nb_personne, #form_entreprise_age {
+#form_entreprise_formulaire_base_nb_personne, #form_entreprise_age {
     -webkit-appearance: none;
     width: 300px;
     background: #a82c5550;
@@ -643,7 +642,12 @@ label[for=form_entreprise_duree_formule_2] {
     margin: 120px auto 20px auto;
     width: 100%;
 }
-#formulaire_heure_de_debut {
+#form_entreprise_formule,
+#form_entreprise_nb_personne_formule,
+#form_entreprise_duree_formule {
+    width: 100%;
+}
+#formulaire_formulaire_base_heure_de_debut {
     margin: 0 auto 32%;
 }
 #formulaire_deroulement{
@@ -656,8 +660,8 @@ label[for=form_entreprise_nb_personne_formule_placeholder],
 #form_entreprise_nb_personne_formule_placeholder {
     display: none;
 }
-#formulaire_heure_de_debut_hour,
-#formulaire_heure_de_debut_minute {
+#formulaire_formulaire_base_heure_de_debut_hour,
+#formulaire_formulaire_base_heure_de_debut_minute {
     padding: 10px;
     border: 1px solid #e4e4e4;
     border-radius: 5px;
@@ -688,7 +692,7 @@ label[for=form_entreprise_nb_personne_formule_placeholder],
 input[type=radio]{
     display: none;
 }
-label[for=form_entreprise_formule_0]{
+label[for=form_entreprise_formule_1]{
     width: 168px;
     height: 208px;
     background-image: url(../img/dj-set1.png);
@@ -698,7 +702,7 @@ label[for=form_entreprise_formule_0]{
     display: block;
     transition: 1.5s;
 }
-label[for=form_entreprise_formule_1]{
+label[for=form_entreprise_formule_2]{
     width: 168px;
     color: #d7dada00;
     height: 208px;
@@ -708,7 +712,7 @@ label[for=form_entreprise_formule_1]{
     cursor: pointer;
     transition: 1.5s;
 }
-label[for=form_entreprise_formule_2]{
+label[for=form_entreprise_formule_3]{
     width: 168px;
     color: #d7dada00;
     height: 208px;
@@ -736,7 +740,7 @@ label[for=form_entreprise_options_2],
 label[for=form_entreprise_options_3] {
     border: 1px solid #e4e4e4;
 }
-label[for=form_entreprise_nb_personne_formule_0]{
+label[for=form_entreprise_nb_personne_formule_1]{
     width: 168px;
     height: 208px;
     background-image: url(../img/30p.png);
@@ -747,7 +751,7 @@ label[for=form_entreprise_nb_personne_formule_0]{
     display: block;
     transition: 1.5s;
 }
-label[for=form_entreprise_nb_personne_formule_1]{
+label[for=form_entreprise_nb_personne_formule_2]{
     width: 168px;
     height: 208px;
     background-image: url(../img/80p.png);
@@ -758,7 +762,7 @@ label[for=form_entreprise_nb_personne_formule_1]{
     display: block;
     transition: 1.5s;
 }
-label[for=form_entreprise_nb_personne_formule_2]{
+label[for=form_entreprise_nb_personne_formule_3]{
     width: 168px;
     height: 208px;
     background-image: url(../img/120p.png);
@@ -769,7 +773,7 @@ label[for=form_entreprise_nb_personne_formule_2]{
     display: block;
     transition: 1.5s;
 }
-label[for=form_entreprise_duree_formule_0]{
+label[for=form_entreprise_duree_formule_1]{
     width: 168px;
     color: #d7dada00;
     height: 208px;
@@ -779,7 +783,7 @@ label[for=form_entreprise_duree_formule_0]{
     cursor: pointer;
     transition: 1.5s;
 }
-label[for=form_entreprise_duree_formule_1]{
+label[for=form_entreprise_duree_formule_2]{
     width: 168px;
     color: #d7dada00;
     height: 208px;
@@ -789,7 +793,7 @@ label[for=form_entreprise_duree_formule_1]{
     cursor: pointer;
     transition: 1.5s;
 }
-label[for=form_entreprise_duree_formule_2]{
+label[for=form_entreprise_duree_formule_3]{
     width: 168px;
     color: #d7dada00;
     height: 208px;
@@ -805,25 +809,25 @@ label[for=form_entreprise_duree_formule_2]{
 .selectedHabillageRadio{
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.562);
 }
-label[for=form_entreprise_formule_0]:hover,
 label[for=form_entreprise_formule_1]:hover,
 label[for=form_entreprise_formule_2]:hover,
-label[for=form_entreprise_nb_personne_formule_0]:hover,
+label[for=form_entreprise_formule_3]:hover,
 label[for=form_entreprise_nb_personne_formule_1]:hover,
 label[for=form_entreprise_nb_personne_formule_2]:hover,
-label[for=form_entreprise_duree_formule_0]:hover,
+label[for=form_entreprise_nb_personne_formule_3]:hover,
 label[for=form_entreprise_duree_formule_1]:hover,
-label[for=form_entreprise_duree_formule_2]:hover {
-    width: 550px;
-    height: 350px;
+label[for=form_entreprise_duree_formule_2]:hover,
+label[for=form_entreprise_duree_formule_3]:hover {
+    width: 321px;
+    height: 309px;
 }
 label[for=form_entreprise_ambiance_fin],
 label[for=form_entreprise_ambiance],
 label[for=form_entreprise_nationalite] {
     margin: 32px 0 20px 0;
 }
-#form_entreprise_nb_personne::-webkit-slider-thumb,
-#formulaire_nb_personne::-webkit-slider-thumb,
+#form_entreprise_formulaire_base_nb_personne::-webkit-slider-thumb,
+#formulaire_formulaire_base_nb_personne::-webkit-slider-thumb,
 #form_entreprise_age::-webkit-slider-thumb{
     -webkit-appearance:none; 
     border:1px solid #ddd;
@@ -837,7 +841,7 @@ label[for=form_entreprise_nationalite] {
 #form_entreprise_habillage {
     margin: 20px auto 50px;
 }
-label[for=form_entreprise_habillage_0] {
+label[for=form_entreprise_habillage_1] {
     background-image: url(../img/white-dj.jpg);
     background-size: cover;
     background-position: center;
@@ -846,7 +850,7 @@ label[for=form_entreprise_habillage_0] {
     color: #d7dada00;
     cursor: pointer;
 }
-label[for=form_entreprise_habillage_1] {
+label[for=form_entreprise_habillage_2] {
     background-image: url(../img/black-dj.jpg);
     background-size: cover;
     background-position: center;
@@ -854,11 +858,11 @@ label[for=form_entreprise_habillage_1] {
     color: #d7dada00;
     cursor: pointer;
 }
-label[for=form_entreprise_habillage_0]:hover,
-label[for=form_entreprise_habillage_1]:hover{
+label[for=form_entreprise_habillage_1]:hover,
+label[for=form_entreprise_habillage_2]:hover{
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.562);
 }
-#formulaire_nb_personne::-moz-range-thumb{
+#formulaire_formulaire_base_nb_personne::-moz-range-thumb{
     -webkit-appearance:none; 
     border:1px solid #ddd;
     border-radius:50%;
@@ -922,7 +926,7 @@ label[for=form_entreprise_habillage_1]:hover{
 .form_numero p {
     font-size: 12px;
 }
-#formulaire_numero{
+#formulaire_formulaire_base_numero{
     font-size: 17px;
     letter-spacing: 1px;
     text-align: center;
