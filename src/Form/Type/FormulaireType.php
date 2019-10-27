@@ -73,17 +73,17 @@ class FormulaireType extends AbstractType
             )
             ->add('codePostal', TextType::class)
             ->add('deroulement', EntityType::class, [
-                'class' => Deroulement::class,
-                'label' => 'Pour quelle étapes avez-vous besoin du Dj ?',
-                'attr'=>['class'=>'select'],
-                'choices' => $options['tabDeroulement'],
-                'choice_label' => 'nom' ])
+                                                    'class' => Deroulement::class,
+                                                    'label' => 'Pour quelle étapes avez-vous besoin du Dj ?',
+                                                    'attr'=>['class'=>'select'],
+                                                    'choices' => $options['tabDeroulement'],
+                                                    'choice_label' => 'nom' ])
             ->add('ambiance', EntityType::class, [
-                    'class' => Ambiance::class,
-                    'label' => 'Quelle ambiance pour quel type de public recherchez-vous ?',
-                    'attr'=>['class'=>'select'],
-                    'choices' => $options['tabAmbiances'],
-                    'choice_label' => 'nom' ])
+                                                'class' => Ambiance::class,
+                                                'label' => 'Quelle ambiance pour quel type de public recherchez-vous ?',
+                                                'attr'=>['class'=>'select'],
+                                                'choices' => $options['tabAmbiances'],
+                                                'choice_label' => 'nom' ])
             ->add('budget', EntityType::class, [
                         'class' => Budget::class,
                         'label' => 'Quel niveau de prestation recherchez-vous ?',

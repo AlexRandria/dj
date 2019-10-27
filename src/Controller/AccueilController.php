@@ -17,6 +17,16 @@ use App\Form\Type\FormEntrepriseType;
 class AccueilController extends AbstractController {
 
     /**
+     * @Route("/testConnexion", name="test")
+     */
+    public function testConnexion(Request $request) {
+        $tests =  $this->getDoctrine()
+                        ->getRepository(Formulaire::class)
+                        ->findOneBy();
+        return $this->render('accueilTest.html.twig',['tests'=>$tests]);
+    }
+
+    /**
      * @Route("/mariage/{code_postal}", name="mariage", defaults={"code_postal"=null})
      */
     public function formulaire(Request $request) {

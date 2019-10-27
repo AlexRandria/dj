@@ -24,15 +24,13 @@ class FormulaireRepository extends ServiceEntityRepository
     //  */
 
 
-    /*
-    public function findOneBySomeField($value): ?Formulaire
+    public function findOneBy(): ?Formulaire
     {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $this->getEntityManager()
+                    ->createQuery("SELECT *
+                                   FROM App:Formulaire f
+                                   ORDER BY f.date_capture ASC
+                                 ") 
+                    ->getResult();
     }
-    */
 }
