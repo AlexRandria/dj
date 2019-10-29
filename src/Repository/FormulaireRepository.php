@@ -23,14 +23,4 @@ class FormulaireRepository extends ServiceEntityRepository
     //  * @return Formulaire[] Returns an array of Formulaire objects
     //  */
 
-
-    public function findOneBy(): ?Formulaire
-    {
-        return $this->getEntityManager()
-                    ->createQuery("SELECT *
-                                   FROM App:Formulaire f
-                                   ORDER BY f.date_capture ASC
-                                 ") 
-                    ->getResult();
-    }
 }
