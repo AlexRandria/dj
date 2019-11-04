@@ -10,25 +10,7 @@
     <button name="button" class="btn-postal" onclick="popup()">Valider</button>
 {% endblock %}
 {% block popup %}
-    <div class="popup" style="display:block" >
-        <img class="cancel"
-             src="{{ asset('img/cancel.svg') }}"
-             alt="Quitter"
-             onclick="cancel()">
-        <h4 class="popup-h4">Nous allons vous poser quelques questions afin de vous présenter Les meilleurs DJs.</h4>
-        <button name="button-popup" class="btn-popup" onclick="suivant()">Suivant</button>
-    </div>
-    <div class="popup_cancel_base" style="display:none">
-        <div class="popup_cancel">
-            <img class="cancel"
-             src="{{ asset('img/cancel2.svg') }}"
-             alt="Quitter"
-             onclick="poursuivre()">
-            <div class="text_cancel">N'arrêtez pas maintenant. Vous avez complété 12% de votre demande</div>
-            <div class="poursuivre" onclick="poursuivre()">Poursuivre le formulaire</div>
-            <div class="annuler" onclick="reload()">Annuler le formulaire</div>
-        </div>
-    </div>
+    {% include 'popup.html.twig' %}
     <div class="popup-get" style="display:none" >
         <h4 class="popup-h4">Votre demande de devis à bien été pris en compte vous pouvez consulter votre boîte Email afin de le télécharger.<br/><br/>
         Un gestionnaire de projet va vous contacter rapidement afin de vous accompagner sur pour la suite de votre projet.</h4>
@@ -40,142 +22,13 @@
              src="{{ asset('img/cancel2.svg') }}"
              alt="Quitter"
              onclick="cancel()">
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
-            <span class="sr-only">10%</span>
-        </div>
-    </div>
-    <div class="form_tour">
-        <div class="form_calendrier">
-            {{ form_widget(form.formulaire_base.date, {'attr': {'style': 'display:none'}}) }}
-            <h2>Quelle est la date de votre événement ?</h2>
-            <div id="calendrier" class="calendrier" style="display:block"></div>
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retour2()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivant2()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_nom_du_lieu" style="display:none">
-            {{ form_label(form.formulaire_base.nom_du_lieu) }}
-            {{ form_widget(form.formulaire_base.nom_du_lieu) }}
-            {{ form_label(form.adresse_du_lieu) }}
-            {{ form_widget(form.adresse_du_lieu) }}
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourNom()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantNom()">Suivant</button>
-            </div>        
-        </div>
-        <div class="form_evenement" style="display:none">
-            {{ form_label(form.formulaire_base.heure_de_debut) }}
-            {{ form_widget(form.formulaire_base.heure_de_debut) }}
-            {{ form_label(form.formulaire_base.nb_personne) }}
-            <div class="personne">40 Personnes</div>
-            {{ form_widget(form.formulaire_base.nb_personne) }}
-            {{ form_label(form.nb_partie) }}
-            {{ form_widget(form.nb_partie) }}
-            {{ form_label(form.format) }}
-            {{ form_widget(form.format) }}
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourEvenement()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantEvenement()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_formule" style="display:none">
-            {{ form_label(form.formule) }}
-            {{ form_widget(form.formule) }}
-            <div class="form_personne" style="display:none">
-            {{ form_label(form.nb_personne_formule) }}
-            {{ form_widget(form.nb_personne_formule) }}
-            </div>
-            <div class="form_duree" style="display:none">
-            {{ form_label(form.duree_formule) }}
-            {{ form_widget(form.duree_formule) }}
-            </div>
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourFormule()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantFormule()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_theme" style="display:none">
-            {{ form_label(form.theme) }}
-            {{ form_widget(form.theme) }}
-            {{ form_label(form.publique) }}
-            {{ form_widget(form.publique) }}
-            {{ form_label(form.age) }}
-            <div class="ans">18 ans</div>
-            {{ form_widget(form.age) }}
-            {{ form_label(form.nationalite) }}
-            {{ form_widget(form.nationalite) }}
-            {{ form_label(form.ambiance) }}
-            {{ form_widget(form.ambiance) }}
-            {{ form_label(form.ambiance_fin) }}
-            {{ form_widget(form.ambiance_fin) }}
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourTheme()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantTheme()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_dj" style="display:none">
-            {{ form_label(form.style_dj) }}
-            {{ form_widget(form.style_dj) }}
-            {{ form_label(form.vetement_dj) }}
-            {{ form_widget(form.vetement_dj) }}
-            {{ form_label(form.repas_dj) }}
-            {{ form_widget(form.repas_dj) }}
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourDj()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantDj()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_habillage" style="display:none">
-            {{ form_label(form.habillage) }}
-            {{ form_widget(form.habillage) }}
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourHabillage()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantHabillage()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_options" style="display:none">
-            {{ form_label(form.options) }}
-            <div class="imgFlex">
-                <div class="imgOptions">
-                    <img src="{{ asset('img/photo-booth.jpg') }}" alt="photo-booth" width="200px" height="120px">
-                    <img src="{{ asset('img/karaoke.jpeg') }}" alt="photo-booth" width="200px" height="120px">
-                    <img src="{{ asset('img/Blindtest.jpg') }}" alt="photo-booth" width="200px" height="120px">
-                    <img src="{{ asset('img/projecteur.png') }}" alt="photo-booth" width="200px" height="120px">
-                </div>
-                {{ form_widget(form.options) }}
-            </div>
-            <div class="buttonFlex">
-                <button name="button-nom" class="btn-retour" onclick="retourOptions()">Retour</button>
-                <button name="button-popup" class="btn btn-nom" onclick="suivantOptions()">Suivant</button>
-            </div>
-        </div>
-        <div class="form_fonction" style="display:none">
-            <div class="cache" style='display:none'></div>
-            {{ form_label(form.fonction) }}
-            {{ form_widget(form.fonction) }}
-            {{ form_label(form.nom_responsable) }}
-            {{ form_widget(form.nom_responsable) }}
-            {{ form_label(form.formulaire_base.email) }}
-            {{ form_widget(form.formulaire_base.email) }}
-            {{ form_label(form.numero_chef) }}
-            {{ form_widget(form.numero_chef) }}
-            <p class="phrase">Les informations ci-dessous vont servir a établir votre devis</p>
-            {{ form_label(form.formulaire_base.nom) }}
-            {{ form_widget(form.formulaire_base.nom) }}
-            {{ form_label(form.formulaire_base.numero) }}
-            {{ form_widget(form.formulaire_base.numero) }}
-            {{ form_label(form.adresse) }}
-            {{ form_widget(form.adresse) }}
-            <button name="btn-get" class="btn btn-get" onclick="suivantGet()">Ge in touch</button>    
-        </div>
-    </div>
+    {% include 'barreProgression.html.twig' %}
+    {% include 'formulaireEntreprise.html.twig' %}
     <div class="footer"></div>
     <div class="copyright"></div>
 {% endblock %}
 {% block fin_form %}
-          {{ form_end(form) }}  
+    {{ form_end(form) }}  
 {% endblock %}
 {% block javascripts %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -48,7 +48,7 @@ class AccueilController extends AbstractController {
             $em->flush();
             return $this->redirectToRoute('one');
         }
-        return $this->render('accueil.html.twig',['form'=>$form->createView()]);
+        return $this->render('accueilMariage.html.twig',['form'=>$form->createView()]);
     }
 
     /**
@@ -82,15 +82,10 @@ class AccueilController extends AbstractController {
         $number = '';
         $mot = '';
         for ($i=0; $i < strlen($id); $i++) { 
-            for ($j=0; $j < 10; $j++) { 
-                if(is_numeric($id{$i})) {
-                    $number .= $id{$i};
-                    break;
-                }
-                elseif(!is_numeric($id{$i}) && $j == 9 ) {
-                    $mot .= $id{$i};
-                }
-            }
+            if(is_numeric($id{$i}))
+                $number .= $id{$i};
+            else
+                $mot .= $id{$i};
         }
         $tabCode = $this->getDoctrine()
                         ->getRepository(CodePostal::class)

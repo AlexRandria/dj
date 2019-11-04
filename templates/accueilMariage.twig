@@ -1,0 +1,27 @@
+{% extends "baseForm.html.twig" %}
+{% block debut_form %}
+    {{ form_start(form) }}
+{% endblock %}
+{% block code %}
+    <h1>Comparez les tarifs des meilleurs Djs de votre région</h1>
+    {{ form_widget(form.codePostal, {'attr': {'placeholder': 'Entrez votre code postal', 'style': 'border-radius: 7px;'}}) }}
+    <ul class="ul_code_postal" style="display:none;"></ul>
+    <button name="button" class="btn-postal" onclick="popup()">Valider</button>
+{% endblock %}
+{% block popup %}
+    {% include 'popup.html.twig' %}
+{% endblock %}
+{% block formulaire %}
+    <img class="cancel"
+             src="{{ asset('img/cancel2.svg') }}"
+             alt="Quitter"
+             onclick="cancel()">
+    {% include 'barreProgression.html.twig' %}
+    {% include 'formulaireMariage.html.twig' %}
+    <div class="footer"></div>
+    <div class="copyright"></div>
+{% endblock %}
+{% block fin_form %}
+          {{ form_end(form) }}  
+{% endblock %}
+
